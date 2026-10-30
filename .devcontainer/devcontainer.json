@@ -1,0 +1,8 @@
+{
+  "name": "CivikStack Lab Workbench",
+  "build": {
+    "dockerfile": "../templates/docker/Dockerfile"
+  },
+  "remoteUser": "coder",
+  "postCreateCommand": "python3 -m unittest discover -s tests -v"
+}

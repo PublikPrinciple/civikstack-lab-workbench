@@ -1,0 +1,28 @@
+[
+  {
+    "id": "demo-a",
+    "name": "Fictional Program A",
+    "age_min": 5,
+    "age_max": 12,
+    "hours": "15:00\u201318:00",
+    "accommodations": null,
+    "availability": null,
+    "source_ids": [
+      "synthetic-source-1"
+    ]
+  },
+  {
+    "id": "demo-b",
+    "name": "Fictional Program B",
+    "age_min": 13,
+    "age_max": 18,
+    "hours": "15:30\u201318:30",
+    "accommodations": [
+      "step-free entrance"
+    ],
+    "availability": false,
+    "source_ids": [
+      "synthetic-source-2"
+    ]
+  }
+]

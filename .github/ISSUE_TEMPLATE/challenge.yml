@@ -1,0 +1,36 @@
+name: Capability challenge
+description: Turn an Access Lab finding into a bounded Intelligence Lab contribution.
+title: "[Challenge] "
+body:
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Access finding and evidence
+      description: Link reviewed sources, or explicitly label this as synthetic.
+    validations:
+      required: true
+  - type: textarea
+    id: capability
+    attributes:
+      label: Capability and expected output
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs, shared contract, and dependencies
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance tests and evidence required
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Privacy, uncertainty, and compute boundaries
+      value: "Approved public or synthetic data only. Preserve unknowns. Production models <=1B parameters."
+    validations:
+      required: true

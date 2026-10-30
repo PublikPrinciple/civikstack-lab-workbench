@@ -1,0 +1,14 @@
+[
+  {
+    "id": "synthetic-source-1",
+    "kind": "synthetic",
+    "title": "Fictional program sheet A",
+    "verified": false
+  },
+  {
+    "id": "synthetic-source-2",
+    "kind": "synthetic",
+    "title": "Fictional program sheet B",
+    "verified": false
+  }
+]

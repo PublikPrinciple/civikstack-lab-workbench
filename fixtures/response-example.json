@@ -1,0 +1,16 @@
+{
+  "request_id": "scenario-01",
+  "candidate_program_ids": [
+    "demo-a"
+  ],
+  "evidence_ids": [
+    "synthetic-source-1"
+  ],
+  "unknowns": [
+    "demo-a availability",
+    "demo-a step-free entrance"
+  ],
+  "next_steps": [
+    "Ask Fictional Program A about availability and step-free access. Synthetic exercise only."
+  ]
+}

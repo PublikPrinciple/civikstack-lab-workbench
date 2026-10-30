@@ -1,0 +1,14 @@
+[
+  {
+    "id": "scenario-01",
+    "age": 8,
+    "needs": [
+      "step-free entrance"
+    ]
+  },
+  {
+    "id": "scenario-02",
+    "age": 15,
+    "needs": []
+  }
+]
