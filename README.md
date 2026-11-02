@@ -21,15 +21,7 @@ We build the **working environment around a small language model** so it can do 
 
 Hosts supply a versioned starting package, synthetic evidence, common input/output contract, deterministic baseline, evaluator, and review process. Participants can improve a tool, prompt, context selection, permission boundary, behavior, or test. Evidence interpretation and failure review are equally useful contributions.
 
-```mermaid
-flowchart LR
-    accTitle: The Builder Lab experiment cycle
-    accDescr: Define the task and success criteria, build its environment, test against evidence, then reduce complexity while preserving the tested behavior.
-    D[Define] --> B[Build] --> T[Test] --> R[Reduce]
-    R --> D
-    classDef lab fill:#111111,stroke:#FF8A28,color:#FFB36B,stroke-width:2px;
-    class D,B,T,R lab;
-```
+![The Builder Lab cycle: Define, Build, Test, Reduce, then repeat.](assets/readme/build-cycle.svg)
 
 **Define** the task and success criteria. **Build** its environment. **Test** against evidence. **Reduce** complexity while preserving the tested behavior, then repeat.
 

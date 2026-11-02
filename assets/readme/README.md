@@ -7,3 +7,5 @@ The scene and glyphs remain fixed while one low-contrast highlight moves slowly 
 Rendering: existing flyer Canvas2D engine, orange-black palette, hexdump grid, 960×360 capture; encoded to a 720×270 GIF with 32 colors at 3 frames/second using installed FFmpeg. The PNG is the first encoded frame. This is a decorative image, not an interactive workspace or an inference interface. No JavaScript executes in the GitHub README.
 
 Source artwork was supplied and its reuse authorized by the repository owner. This note records provenance; it does not select a repository-wide license.
+
+`build-cycle.svg` is a newly authored static diagram with a title, description and readable-text equivalent in the README. It contains no scripts, external fonts or interactive controls.
