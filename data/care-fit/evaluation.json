@@ -1,0 +1,490 @@
+{
+  "schema_version": "care-fit.v1",
+  "synthetic": true,
+  "cases": [
+    {
+      "case_id": "evaluation-01",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e01-notice",
+          "text": "FICTIONAL NOTICE: Recurring daily afterschool care runs every week Monday through Friday from 15:30 to 18:30."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": "daily_afterschool_care",
+          "source_ids": [
+            "e01-notice"
+          ]
+        },
+        "days": {
+          "value": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "source_ids": [
+            "e01-notice"
+          ]
+        },
+        "hours": {
+          "value": {
+            "start": "15:30",
+            "end": "18:30"
+          },
+          "source_ids": [
+            "e01-notice"
+          ]
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e01-notice"
+          ]
+        }
+      },
+      "conflicts": []
+    },
+    {
+      "case_id": "evaluation-02",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e02-notice",
+          "text": "FICTIONAL NOTICE: Recurring daily afterschool care runs every week Monday through Friday from 14:30 to 17:30."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": "daily_afterschool_care",
+          "source_ids": [
+            "e02-notice"
+          ]
+        },
+        "days": {
+          "value": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "source_ids": [
+            "e02-notice"
+          ]
+        },
+        "hours": {
+          "value": {
+            "start": "14:30",
+            "end": "17:30"
+          },
+          "source_ids": [
+            "e02-notice"
+          ]
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e02-notice"
+          ]
+        }
+      },
+      "conflicts": []
+    },
+    {
+      "case_id": "evaluation-03",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e03-notice",
+          "text": "FICTIONAL NOTICE: A single Saturday enrichment event is offered once. It does not recur weekly and is an event rather than daily afterschool care. Start and end times are omitted."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": "event",
+          "source_ids": [
+            "e03-notice"
+          ]
+        },
+        "days": {
+          "value": [
+            "sat"
+          ],
+          "source_ids": [
+            "e03-notice"
+          ]
+        },
+        "hours": {
+          "value": null,
+          "source_ids": []
+        },
+        "recurring": {
+          "value": false,
+          "source_ids": [
+            "e03-notice"
+          ]
+        }
+      },
+      "conflicts": []
+    },
+    {
+      "case_id": "evaluation-04",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e04-card",
+          "text": "FICTIONAL PROGRAM CARD: Recurring daily afterschool care runs every week Monday through Friday from 15:00 to 18:00."
+        },
+        {
+          "id": "e04-page",
+          "text": "FICTIONAL PROGRAM PAGE: Recurring daily afterschool care runs every week Monday, Wednesday, and Friday from 15:00 to 18:00. Neither document is identified as newer or authoritative; the conflict has not been resolved."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": "daily_afterschool_care",
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        },
+        "days": {
+          "value": null,
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        },
+        "hours": {
+          "value": {
+            "start": "15:00",
+            "end": "18:00"
+          },
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        }
+      },
+      "conflicts": [
+        "days"
+      ]
+    },
+    {
+      "case_id": "evaluation-05",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e05-card",
+          "text": "FICTIONAL PROGRAM CARD: Recurring daily afterschool care runs every week Monday through Friday from 15:00 to 18:00."
+        },
+        {
+          "id": "e05-page",
+          "text": "FICTIONAL PROGRAM PAGE: This offering is tutoring, not daily afterschool care. Tutoring runs every week Monday through Friday from 15:00 to 18:00. Neither document is identified as newer or authoritative; the service-type conflict has not been resolved."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": null,
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        },
+        "days": {
+          "value": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        },
+        "hours": {
+          "value": {
+            "start": "15:00",
+            "end": "18:00"
+          },
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        }
+      },
+      "conflicts": [
+        "service_type"
+      ]
+    },
+    {
+      "case_id": "evaluation-06",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e06-notice",
+          "text": "FICTIONAL NOTICE: Recurring daily afterschool care runs every week Monday through Friday from 14:30 to 18:30. No information about seats, admission, eligibility, or outcomes is provided."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": "daily_afterschool_care",
+          "source_ids": [
+            "e06-notice"
+          ]
+        },
+        "days": {
+          "value": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "source_ids": [
+            "e06-notice"
+          ]
+        },
+        "hours": {
+          "value": {
+            "start": "14:30",
+            "end": "18:30"
+          },
+          "source_ids": [
+            "e06-notice"
+          ]
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e06-notice"
+          ]
+        }
+      },
+      "conflicts": []
+    },
+    {
+      "case_id": "evaluation-07",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e07-notice",
+          "text": "FICTIONAL NOTICE: After-school sessions run every week Monday through Friday from 15:00 to 18:00. The notice does not describe whether these sessions are daily care, tutoring, drop-in enrichment, or another service."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": null,
+          "source_ids": []
+        },
+        "days": {
+          "value": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "source_ids": [
+            "e07-notice"
+          ]
+        },
+        "hours": {
+          "value": {
+            "start": "15:00",
+            "end": "18:00"
+          },
+          "source_ids": [
+            "e07-notice"
+          ]
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e07-notice"
+          ]
+        }
+      },
+      "conflicts": []
+    },
+    {
+      "case_id": "evaluation-08",
+      "synthetic": true,
+      "need": {
+        "service_type": "daily_afterschool_care",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "hours": {
+          "start": "15:00",
+          "end": "18:00"
+        },
+        "recurring": true
+      },
+      "sources": [
+        {
+          "id": "e08-notice",
+          "text": "FICTIONAL NOTICE: This offering is daily afterschool care, with the care schedule offered every week on Monday, Wednesday, and Friday only. The notice supplies no start or end time."
+        }
+      ],
+      "facts": {
+        "service_type": {
+          "value": "daily_afterschool_care",
+          "source_ids": [
+            "e08-notice"
+          ]
+        },
+        "days": {
+          "value": [
+            "mon",
+            "wed",
+            "fri"
+          ],
+          "source_ids": [
+            "e08-notice"
+          ]
+        },
+        "hours": {
+          "value": null,
+          "source_ids": []
+        },
+        "recurring": {
+          "value": true,
+          "source_ids": [
+            "e08-notice"
+          ]
+        }
+      },
+      "conflicts": []
+    }
+  ]
+}

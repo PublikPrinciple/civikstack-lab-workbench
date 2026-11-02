@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PublikPrinciple/civikstack-lab-workbench/schemas/task-environment.schema.json",
+  "title": "Builder Lab task environment v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schema_version", "id", "version", "purpose", "routepack", "system_prompt", "behavior", "tools", "permissions", "adapter_contract", "model_policy", "execution", "model", "data"],
+  "properties": {
+    "$schema": {"type": "string", "minLength": 1},
+    "schema_version": {"const": "lab-task-environment.v1"},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "purpose": {"type": "string", "minLength": 1},
+    "routepack": {"$ref": "#/$defs/path"},
+    "system_prompt": {"$ref": "#/$defs/path"},
+    "behavior": {"$ref": "#/$defs/path"},
+    "tools": {"$ref": "#/$defs/path"},
+    "permissions": {"$ref": "#/$defs/path"},
+    "adapter_contract": {"$ref": "#/$defs/path"},
+    "model_policy": {"$ref": "#/$defs/path"},
+    "execution": {
+      "type": "object", "additionalProperties": false,
+      "required": ["harness", "baseline", "evaluator", "mode", "isolation", "timeout_seconds"],
+      "properties": {
+        "harness": {"const": "labbench"},
+        "baseline": {"const": "labbench.baseline:solve"},
+        "evaluator": {"const": "labbench.evaluate"},
+        "mode": {"const": "local_reviewed_code"},
+        "isolation": {"const": "none"},
+        "timeout_seconds": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "model": {
+      "type": "object", "additionalProperties": false,
+      "required": ["required_for_baseline", "shared_binding", "endpoint", "parameter_ceiling", "policy_status"],
+      "properties": {
+        "required_for_baseline": {"const": false},
+        "shared_binding": {"const": "proposed_not_configured"},
+        "endpoint": {"type": "null"},
+        "parameter_ceiling": {"type": "null"},
+        "policy_status": {"const": "unresolved_1B_vs_7B"}
+      }
+    },
+    "data": {
+      "type": "object", "additionalProperties": false,
+      "required": ["practice", "evaluation"],
+      "properties": {"practice": {"$ref": "#/$defs/split"}, "evaluation": {"$ref": "#/$defs/split"}}
+    }
+  },
+  "$defs": {
+    "path": {"type": "string", "minLength": 1, "description": "Local path relative to package; loader resolves and confines it to this repository."},
+    "split": {"type": "object", "additionalProperties": false, "required": ["inputs", "expected"], "properties": {"inputs": {"$ref": "#/$defs/path"}, "expected": {"$ref": "#/$defs/path"}}}
+  }
+}

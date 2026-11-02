@@ -1,10 +1,12 @@
 # Operator setup and deployment gates
 
+For the Builder Lab's proposed shared model/browser workspaces, use [HOSTED_READINESS.md](HOSTED_READINESS.md) as the readiness gate and [ARCHITECTURE.md](ARCHITECTURE.md) for component responsibilities. The template below remains a trusted-pilot scaffold with unresolved provider verification and isolation tests. It has not been deployed for this event.
+
 ## Current state
 Public repository: https://github.com/PublikPrinciple/civikstack-lab-workbench . Coder deployment, invitations, and model service remain unconfigured. Host is unresolved. No hosting purchase or access grants are included.
 
 ## 1. Repository
-Select the canonical GitHub owner/repository and its visibility. If new, create it with GitHub UI or `gh repo create OWNER/REPO --private` (choose public only deliberately). Select a license before advertising open-source reuse. Push these files, review Actions results, then create the six issues using `python3 scripts/seed_issues.py --repo OWNER/REPO`. The script uses your authenticated GitHub CLI. It previews by default; add `--apply` to create missing issues. It does not create a Project board, grant access, or change visibility.
+The existing public repository is `PublikPrinciple/civikstack-lab-workbench`; its display title is Builder Lab Workbench. Preserve its URL for the event QR. Six starter issues already exist; do not reseed or rewrite them as part of this preparation. Select a license before advertising open-source reuse. Local task-environment changes require review and explicit publication approval as a coherent set. The original issue-seeding script remains available for authorized maintenance and previews by default.
 
 ## 2. Coder host
 Use an operator-controlled Linux host with Docker and a supported Coder installation, persistent Coder database, HTTPS access URL, and backups. Follow current official deployment guidance: https://coder.com/docs/install . Do not deploy this temporary chat workspace as the meetup service.

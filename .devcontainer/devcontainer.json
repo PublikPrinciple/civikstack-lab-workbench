@@ -1,5 +1,5 @@
 {
-  "name": "CivikStack Lab Workbench",
+  "name": "Builder Lab Workbench",
   "build": {
     "dockerfile": "../templates/docker/Dockerfile"
   },

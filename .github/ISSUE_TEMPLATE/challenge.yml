@@ -1,5 +1,5 @@
-name: Capability challenge
-description: Turn an Access Lab finding into a bounded Intelligence Lab contribution.
+name: Task environment experiment
+description: Propose one bounded task-environment change and how to evaluate it.
 title: "[Challenge] "
 body:
   - type: textarea
@@ -12,13 +12,13 @@ body:
   - type: textarea
     id: capability
     attributes:
-      label: Capability and expected output
+      label: Task environment, component change, and intended behavior
     validations:
       required: true
   - type: textarea
     id: inputs
     attributes:
-      label: Inputs, shared contract, and dependencies
+      label: Package version, input/output contract, route, and dependencies
     validations:
       required: true
   - type: textarea
@@ -30,7 +30,7 @@ body:
   - type: textarea
     id: boundaries
     attributes:
-      label: Privacy, uncertainty, and compute boundaries
-      value: "Approved public or synthetic data only. Preserve unknowns. Production models <=1B parameters."
+      label: Permissions, isolation, uncertainty, and compute boundaries
+      value: "Approved public-safe or synthetic data only. Preserve unknowns. Current local runner is not a sandbox. Production <=1B versus prior 7B planning remains unresolved; use the no-model baseline pending owner decision."
     validations:
       required: true

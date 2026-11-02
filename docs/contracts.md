@@ -1,5 +1,7 @@
 # Shared contract v0.1
 
+This original contract supports the six exploratory starter cards. The November 10 Builder Lab uses the separate, executable [care-fit v1 adapter contract](ADAPTER_CONTRACT.md). Existing fixtures remain unchanged.
+
 `fixtures/programs.json` contains synthetic program records. Required fields: `id`, `name`, `age_min`, `age_max`, `hours`, `accommodations`, `availability`, `source_ids`. Unknown accommodations and availability are JSON null. `fixtures/sources.json` explicitly identifies each source as fictional. A source reference is not proof of verification; real evidence needs reviewer and verification date recorded separately.
 
 `fixtures/requests.json` contains fictional requests with `id`, `age`, and `needs`. No names, addresses, or persistent person identifiers are used.

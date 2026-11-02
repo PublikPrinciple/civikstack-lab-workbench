@@ -1,0 +1,11 @@
+{
+  "schema_version": "lab-tools.v1",
+  "task_tools": [
+    {"id": "case.read", "input": "one care-fit.v1 case passed by host", "output": "synthetic need, facts and source excerpts", "side_effects": "none"},
+    {"id": "response.emit", "input": "care-fit.v1 response", "output": "validated response to evaluator", "side_effects": "response only"}
+  ],
+  "host_tools": [
+    {"id": "host.evaluate", "input": "response plus separate expected reference", "output": "dimension counts and per-case failures", "side_effects": "local result file"}
+  ],
+  "implementation_note": "These are route-level contracts over current Python functions, not implemented remote RPC endpoints or model tool calls."
+}

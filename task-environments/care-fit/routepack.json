@@ -1,0 +1,16 @@
+{
+  "schema_version": "lab-routepack.v1",
+  "id": "care-fit-route",
+  "version": "0.1.0",
+  "integration_status": "local_contract_no_RPOS_adapter",
+  "input_contract": "care-fit.v1 case",
+  "output_contract": "care-fit.v1 response",
+  "evidence": {"scope": "case.sources", "kind": "newly_authored_synthetic", "reference_review": "draft_pending_domain_review"},
+  "permission_references": ["permissions.json"],
+  "steps": [
+    {"id": "validate", "action": "Validate the synthetic case and source references.", "implementation": "labbench.contract.validate_case", "tools": ["case.read"]},
+    {"id": "compare", "action": "Compare service type, days, hours and recurrence; retain contradictions as unknown.", "implementation": "labbench.baseline.solve", "tools": ["case.read"]},
+    {"id": "respond", "action": "Return cited field assessments, overall label and protected unknowns.", "implementation": "labbench.contract.validate_response", "tools": ["response.emit"]},
+    {"id": "evaluate", "action": "Host evaluator compares response with separate draft references; human reviews rationale.", "implementation": "labbench.evaluate.score", "tools": ["host.evaluate"]}
+  ]
+}

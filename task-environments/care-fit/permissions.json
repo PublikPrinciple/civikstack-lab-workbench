@@ -1,0 +1,14 @@
+{
+  "schema_version": "lab-permissions.v1",
+  "requested_task_access": {
+    "read": ["current synthetic case only"],
+    "write": ["response to host evaluator"],
+    "network": [],
+    "credentials": [],
+    "desktop_or_lan": false,
+    "expected_answers": false
+  },
+  "host_access": {"read": ["reference answers"], "write": ["reviewable result report"]},
+  "enforcement_status": "declarative_only_local_runner_is_not_a_sandbox",
+  "hosted_requirement": "Treat participant packages as untrusted. Authenticate server-side and enforce workspace, tool, filesystem, network, inference and budget boundaries before multiuser execution. Prompts and this manifest do not grant or enforce permissions."
+}
