@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schemas/task-environment.schema.json",
+  "schema_version": "lab-task-environment.v1",
+  "id": "care-fit",
+  "version": "0.1.0",
+  "purpose": "Compare synthetic documentary service and schedule facts against a fictional recurring afterschool-care need.",
+  "routepack": "routepack.json",
+  "system_prompt": "system-prompt.md",
+  "behavior": "behavior.json",
+  "tools": "tools.json",
+  "permissions": "permissions.json",
+  "adapter_contract": "../../docs/ADAPTER_CONTRACT.md",
+  "model_policy": "../../docs/POLICY_DECISIONS.md",
+  "execution": {
+    "harness": "labbench",
+    "baseline": "labbench.baseline:solve",
+    "evaluator": "labbench.evaluate",
+    "mode": "local_reviewed_code",
+    "isolation": "none",
+    "timeout_seconds": 10
+  },
+  "model": {
+    "required_for_baseline": false,
+    "shared_binding": "proposed_not_configured",
+    "endpoint": null,
+    "parameter_ceiling": null,
+    "policy_status": "unresolved_1B_vs_7B"
+  },
+  "data": {
+    "practice": {"inputs": "../../data/care-fit/practice.json", "expected": "../../data/care-fit/practice.expected.json"},
+    "evaluation": {"inputs": "../../data/care-fit/evaluation.json", "expected": "../../data/care-fit/evaluation.expected.json"}
+  }
+}

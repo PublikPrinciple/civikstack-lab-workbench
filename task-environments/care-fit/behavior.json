@@ -1,0 +1,10 @@
+{
+  "schema_version": "care-fit-behavior.v1",
+  "label_precedence": ["mismatch", "unknown", "potential_fit"],
+  "fields": ["service_type", "days", "hours", "recurring"],
+  "protected_unknowns": ["seats", "admission", "eligibility", "outcomes"],
+  "conflict_rule": "Return unknown for the disputed field and cite both sources.",
+  "missing_rule": "Return unknown for a missing field; an absent fact is not false.",
+  "scope": "Only supplied service and schedule dimensions; no actual service referrals or outcome claims.",
+  "human_review": "Required for evidence meaning, rationale, corrected references and any broader use."
+}

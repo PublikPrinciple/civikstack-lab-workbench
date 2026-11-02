@@ -1,4 +1,4 @@
-name: Starter checks
+name: Workbench checks
 on: [push, pull_request]
 permissions:
   contents: read
@@ -12,3 +12,6 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - run: python scripts/check_fixtures.py
+      - run: python -m labbench run --split practice --output results/local/baseline-practice.json
+      - run: python -m labbench run --split evaluation --output results/local/baseline-evaluation.json
+      - run: python -m labbench run --split evaluation --adapter solutions/care-fit/adapter-example/adapter.py --output results/local/adapter-evaluation.json

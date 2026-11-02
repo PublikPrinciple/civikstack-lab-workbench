@@ -1,0 +1,309 @@
+{
+  "schema_version": "care-fit.v1",
+  "review_status": "draft_pending_domain_review",
+  "cases": [
+    {
+      "case_id": "evaluation-01",
+      "label": "mismatch",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "e01-notice"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "e01-notice"
+          ]
+        },
+        "hours": {
+          "status": "mismatch",
+          "source_ids": [
+            "e01-notice"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e01-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes"
+      ],
+      "review_note": "e01-notice starts at 15:30, leaving the required 15:00-15:30 interval uncovered even though it ends later. All other assessed conditions match."
+    },
+    {
+      "case_id": "evaluation-02",
+      "label": "mismatch",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "e02-notice"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "e02-notice"
+          ]
+        },
+        "hours": {
+          "status": "mismatch",
+          "source_ids": [
+            "e02-notice"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e02-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes"
+      ],
+      "review_note": "e02-notice ends at 17:30, leaving the required 17:30-18:00 interval uncovered even though it starts earlier. All other assessed conditions match."
+    },
+    {
+      "case_id": "evaluation-03",
+      "label": "mismatch",
+      "assessments": {
+        "service_type": {
+          "status": "mismatch",
+          "source_ids": [
+            "e03-notice"
+          ]
+        },
+        "days": {
+          "status": "mismatch",
+          "source_ids": [
+            "e03-notice"
+          ]
+        },
+        "hours": {
+          "status": "unknown",
+          "source_ids": []
+        },
+        "recurring": {
+          "status": "mismatch",
+          "source_ids": [
+            "e03-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "hours"
+      ],
+      "review_note": "e03-notice explicitly describes one Saturday event without weekly recurrence. Service type, days, and recurrence mismatch the need. Hours remain unknown, and the missing hours do not erase the three explicit mismatches."
+    },
+    {
+      "case_id": "evaluation-04",
+      "label": "unknown",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        },
+        "days": {
+          "status": "unknown",
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        },
+        "hours": {
+          "status": "match",
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e04-card",
+            "e04-page"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "days"
+      ],
+      "review_note": "e04-card lists five weekdays while e04-page lists Monday/Wednesday/Friday. Neither is authoritative or superseded, so the conflicting days remain unknown with both citations. Care type, hours, and weekly recurrence agree."
+    },
+    {
+      "case_id": "evaluation-05",
+      "label": "unknown",
+      "assessments": {
+        "service_type": {
+          "status": "unknown",
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        },
+        "hours": {
+          "status": "match",
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e05-card",
+            "e05-page"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "service_type"
+      ],
+      "review_note": "e05-card says daily care and e05-page says tutoring; neither is authoritative or superseded. Keep service type unknown with both citations. Agreement about hours, days, and weekly recurrence does not settle the service type."
+    },
+    {
+      "case_id": "evaluation-06",
+      "label": "potential_fit",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "e06-notice"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "e06-notice"
+          ]
+        },
+        "hours": {
+          "status": "match",
+          "source_ids": [
+            "e06-notice"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e06-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes"
+      ],
+      "review_note": "e06-notice supplies care on all five required days every week, with 14:30-18:30 fully enclosing 15:00-18:00. A broader interval covers the need. Potential fit never confirms a seat, admission, eligibility, or an outcome."
+    },
+    {
+      "case_id": "evaluation-07",
+      "label": "unknown",
+      "assessments": {
+        "service_type": {
+          "status": "unknown",
+          "source_ids": []
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "e07-notice"
+          ]
+        },
+        "hours": {
+          "status": "match",
+          "source_ids": [
+            "e07-notice"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e07-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "service_type"
+      ],
+      "review_note": "e07-notice supplies matching days, hours, and weekly recurrence but leaves the service type unspecified. The word sessions does not establish daily care. With no known mismatch and one missing condition, the label is unknown."
+    },
+    {
+      "case_id": "evaluation-08",
+      "label": "mismatch",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "e08-notice"
+          ]
+        },
+        "days": {
+          "status": "mismatch",
+          "source_ids": [
+            "e08-notice"
+          ]
+        },
+        "hours": {
+          "status": "unknown",
+          "source_ids": []
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "e08-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "hours"
+      ],
+      "review_note": "e08-notice identifies care and weekly recurrence, but Monday/Wednesday/Friday do not cover Tuesday and Thursday. Hours are missing. The known days mismatch determines the label while hours remain unknown."
+    }
+  ]
+}

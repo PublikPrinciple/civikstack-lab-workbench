@@ -1,0 +1,152 @@
+{
+  "schema_version": "care-fit.v1",
+  "review_status": "draft_pending_domain_review",
+  "cases": [
+    {
+      "case_id": "practice-01",
+      "label": "potential_fit",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "p01-notice"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "p01-notice"
+          ]
+        },
+        "hours": {
+          "status": "match",
+          "source_ids": [
+            "p01-notice"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "p01-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes"
+      ],
+      "review_note": "p01-notice explicitly supplies care, all five required days, 15:00-18:00 coverage, and weekly recurrence. Potential fit concerns these four documentary conditions only; seats, admission, eligibility, and outcomes remain unknown."
+    },
+    {
+      "case_id": "practice-02",
+      "label": "mismatch",
+      "assessments": {
+        "service_type": {
+          "status": "mismatch",
+          "source_ids": [
+            "p02-notice"
+          ]
+        },
+        "days": {
+          "status": "mismatch",
+          "source_ids": [
+            "p02-notice"
+          ]
+        },
+        "hours": {
+          "status": "mismatch",
+          "source_ids": [
+            "p02-notice"
+          ]
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "p02-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes"
+      ],
+      "review_note": "p02-notice describes tutoring on two weekdays for one hour. Tutoring is not daily care, Tuesday/Thursday do not cover five weekdays, and 16:00-17:00 does not cover 15:00-18:00. Weekly recurrence is supported. The mismatch does not establish admission or eligibility."
+    },
+    {
+      "case_id": "practice-03",
+      "label": "unknown",
+      "assessments": {
+        "service_type": {
+          "status": "match",
+          "source_ids": [
+            "p03-notice"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "p03-notice"
+          ]
+        },
+        "hours": {
+          "status": "unknown",
+          "source_ids": []
+        },
+        "recurring": {
+          "status": "match",
+          "source_ids": [
+            "p03-notice"
+          ]
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "hours"
+      ],
+      "review_note": "p03-notice confirms daily care, all five weekdays, and weekly recurrence, but omits hours. Missing hours cannot be filled in from the phrase afterschool. No known condition mismatches, so the overall label is unknown."
+    },
+    {
+      "case_id": "practice-04",
+      "label": "mismatch",
+      "assessments": {
+        "service_type": {
+          "status": "mismatch",
+          "source_ids": [
+            "p04-notice"
+          ]
+        },
+        "days": {
+          "status": "match",
+          "source_ids": [
+            "p04-notice"
+          ]
+        },
+        "hours": {
+          "status": "match",
+          "source_ids": [
+            "p04-notice"
+          ]
+        },
+        "recurring": {
+          "status": "unknown",
+          "source_ids": []
+        }
+      },
+      "unknowns": [
+        "seats",
+        "admission",
+        "eligibility",
+        "outcomes",
+        "recurring"
+      ],
+      "review_note": "p04-notice identifies drop-in enrichment rather than daily care. The listed days and hours cover the request; recurrence is missing. The explicit service-type mismatch determines the overall label while recurrence stays unknown."
+    }
+  ]
+}
