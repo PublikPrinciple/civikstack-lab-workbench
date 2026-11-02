@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/builder-lab-ascii-still.png">
-  <img src="assets/readme/builder-lab-ascii.gif" width="960" alt="Orange ASCII rendering of playground climbing structures, with a gentle moving highlight.">
+  <img src="assets/readme/builder-lab-ascii.gif" width="960" alt="White Community Intelligence League logo centered over an orange-and-black ASCII playground, with a gentle moving highlight.">
 </picture>
 
 [View the static artwork](assets/readme/builder-lab-ascii-still.png)
