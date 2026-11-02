@@ -1,14 +1,37 @@
 # Builder Lab Workbench
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/builder-lab-ascii-still.png">
+  <img src="assets/readme/builder-lab-ascii.gif" width="960" alt="Orange ASCII rendering of playground climbing structures, with a gentle moving highlight.">
+</picture>
+
+[View the static artwork](assets/readme/builder-lab-ascii-still.png)
+
 **Build a reproducible task environment. Find the minimum sufficient intelligence to do the job reliably.**
+
+**[Start here](docs/START_HERE.md)** | **[Copy the model prompt](docs/MODEL_PROMPT.md)** | **[Run the local practice](#run-the-current-baseline)**
+
+Local workflow: [tested](docs/VALIDATION.md). Hosted Coder workspace: [unavailable](docs/HOSTED_READINESS.md).
 
 This is the shared workbench for the Builder Lab at **Durham Food Hall, November 10, 2026, 6–8 pm Eastern (America/New_York)**, and for continuing the work afterward.
 
-**[Start here →](docs/START_HERE.md)** · [Task-environment contract](docs/TASK_ENVIRONMENT.md) · [First example](challenges/care-fit/README.md) · [Participant guide](docs/PARTICIPANT_GUIDE.md)
+[Task-environment contract](docs/TASK_ENVIRONMENT.md) | [First example](challenges/care-fit/README.md) | [Participant guide](docs/PARTICIPANT_GUIDE.md)
 
 We build the **working environment around a small language model** so it can do a particular job reliably. That reproducible task-environment package contains the runner (harness), tools, behavior rules, system prompt, supplied context, permissions, and evaluation. A capability is what that package can do. We improve the surrounding environment, measure its behavior, and determine how little model capacity the task actually needs.
 
 Hosts supply a versioned starting package, synthetic evidence, common input/output contract, deterministic baseline, evaluator, and review process. Participants can improve a tool, prompt, context selection, permission boundary, behavior, or test. Evidence interpretation and failure review are equally useful contributions.
+
+```mermaid
+flowchart LR
+    accTitle: The Builder Lab experiment cycle
+    accDescr: Define the task and success criteria, build its environment, test against evidence, then reduce complexity while preserving the tested behavior.
+    D[Define] --> B[Build] --> T[Test] --> R[Reduce]
+    R --> D
+    classDef lab fill:#111111,stroke:#FF8A28,color:#FFB36B,stroke-width:2px;
+    class D,B,T,R lab;
+```
+
+**Define** the task and success criteria. **Build** its environment. **Test** against evidence. **Reduce** complexity while preserving the tested behavior, then repeat.
 
 ## First example: care-fit
 
